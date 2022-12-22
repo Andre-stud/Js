@@ -1,0 +1,87 @@
+body {
+  background-color: rgba(196, 196, 196, 1);
+}
+#app {
+  margin-top: 5%;
+  margin-left: 25%;
+}
+
+.searchInput {
+  width: 487px;
+  height: 61px;
+  font-size: 48px;
+  padding-left: 13px;
+  background: rgba(255, 255, 255, 1);
+  border: none;
+}
+
+.searchCount {
+  max-height: 220px;
+  width: 500px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.repo-prev {
+  height: 44px;
+  background-color: rgba(227, 227, 227, 1);
+  border: 2px solid rgba(0, 0, 0, 1);
+  font-size: 30px;
+  padding-left: 13px;
+}
+
+.repo-prev:hover {
+  background-color: rgba(101, 205, 249, 1);
+}
+
+#repoList {
+  padding: 0px;
+  padding-top: 45px;
+  width: 500px;
+  margin: 0px;
+  margin-left: 25%;
+}
+
+#repoList > li {
+  position: relative;
+  height: 100px;
+  background-color: rgba(226, 123, 235, 1);
+  border: 1px solid rgba(0, 0, 0, 1);
+  display: flex;
+}
+
+.repo-text {
+  margin-top: 4px;
+}
+
+#repoList > li > button {
+  position: absolute;
+  top: 35%;
+  right: 5%;
+  width: 42px;
+  height: 38px;
+  background-color: rgba(226, 123, 235, 1);
+  border: none;
+}
+
+#repoList > li > ul {
+  font-size: 24px;
+  padding-left: 16px;
+}
+
+button:before,
+button:after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  bottom: 15px;
+  width: 42px;
+  height: 4px;
+  background: #ff0000;
+}
+button:before {
+  transform: rotate(45deg);
+}
+button:after {
+  transform: rotate(-45deg);
+}
