@@ -110,21 +110,16 @@ function addText(teg, arr) {
   teg.append(li);
 }
 
-searchInput.addEventListener("keyup", debounce(searchRepo, 250));
+searchInput.addEventListener("keyup", debounce(searchRepo, 450));
 
 searchCount.addEventListener("click", clickRepo);
 
 repoList.addEventListener("click", removeListRepo);
 
 async function searchRepo() {
-  if (searchInput.value.length != 0) {
-    removeRepo();
-  }
-
   if (!searchInput.value) {
     return removeRepo();
   }
-
   return await fetch(
     `https://api.github.com/search/repositories?q=${searchInput.value}`
   ).then((res) => {
@@ -141,6 +136,9 @@ async function searchRepo() {
           createRepo(el);
         });
       });
+    }
+    if (searchInput.value.length != 0) {
+      removeRepo();
     }
   });
 }
