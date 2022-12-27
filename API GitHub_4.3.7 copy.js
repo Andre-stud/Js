@@ -94,6 +94,7 @@ clickRepo = (event) => {
 
   addText(ulText, elemArr);
   removeRepo();
+  searchInput.value = "";
 };
 
 function addText(teg, arr) {
